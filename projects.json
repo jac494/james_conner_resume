@@ -110,55 +110,82 @@
 		]
 	},
 	{
-		"company": "",
-		"role": "",
-		"project_start": "",
-		"project_end": "",
-		"project_title": "",
-		"objective": "",
-		"achievements": "",
+		"company": "Premier Satellite & Internet",
+		"role": "Network Engineer",
+		"project_start": "May 2014",
+		"project_end": "July 2014",
+		"project_title": "Network Core Protocol Conversion",
+		"objective": "Convert network core from layer-2 switched network utilizing static routes to dynamically-routed core using OSPF enabling future expansion to add BGP peerings, increase network scalability, and simplify configuration.",
+		"achievements": "Successfully migrated production network core serving 24/7 user traffic. Edge router configuration simplified upon addtion of new sites by dynamically adding OSPF adjacencies which also aided in faster scalability without the need for additional manual updates within the network core and edge.",
 		"technologies": [
-			"",
-			""
+			"TCP/IP",
+			"OSPF",
+			"BGP",
+			"RouterOS"
 		]
 	},
 	{
-		"company": "",
-		"role": "",
-		"project_start": "",
-		"project_end": "",
-		"project_title": "",
-		"objective": "",
-		"achievements": "",
+		"company": "Premier Satellite & Internet",
+		"role": "Network Engineer",
+		"project_start": "July 2014",
+		"project_end": "February 2015",
+		"project_title": "BGP Multihoming",
+		"objective": "Add additional BGP peerings to increase fault tolerance and network throughput.",
+		"achievements": "Upgraded edge routers to hardware and software that could handle larger routing tables and routing updates from multiple peers while maintaining throughput for user traffic. Incrementally enabled BGP peerings and validated routing policies throughout the network. Provided fault-tolerance through dynamic routing around failures at the network edge.",
 		"technologies": [
-			"",
-			""
+			"TCP/IP",
+			"BGP",
+			"OSPF",
+			"RouterOS"
 		]
 	},
 	{
-		"company": "",
-		"role": "",
-		"project_start": "",
-		"project_end": "",
-		"project_title": "",
-		"objective": "",
-		"achievements": "",
+		"company": "Premier Satellite & Internet",
+		"role": "Network Engineer",
+		"project_start": "May 2014",
+		"project_end": "October 2015",
+		"project_title": "Site Addition and Integration",
+		"objective": "Join new customer sites into the network. Evaluate requirements, implement configuration to integrate into existing network design, deploy necessary hardware and integrate into monitoring platform, and validate that deployment meets requirements.",
+		"achievements": "Deployed IPAM service for network operations to more effeciently maintain and view IP space on deployment. Deployed DNS for internal network operations to enable consistent scale and predictable access with existing network infrastructure and as new infrastructure was added. Built and deployed physical and logical network configurations for new network sites. Used VMWare ESXi to create hypervisor platform for network services and moved NMS, DNS, and IPAM into virtual infrastructure to consolidate footprint as well as ease backup and redeployment in outages and disaster recovery.",
 		"technologies": [
-			"",
-			""
+			"IPAM",
+			"DNS",
+			"NMS",
+			"SNMP",
+			"TCP/IP",
+			"OSPF",
+			"BGP",
+			"802.11 WLANs",
+			"802.1q VLANs",
+			"PTP wireless backhaul",
+			"PTMP wireless",
+			"RouterOS",
+			"Ubiquiti Unifi",
+			"Mimosa Wireless",
+			"VoIP",
+			"SIP",
+			"Linux",
+			"Asterisk PBX",
+			"VMWare ESXi",
+			"Dell Poweredge"
 		]
 	},
 	{
-		"company": "",
-		"role": "",
-		"project_start": "",
-		"project_end": "",
-		"project_title": "",
-		"objective": "",
-		"achievements": "",
+		"company": "Premier Satellite & Internet",
+		"role": "Network Engineer",
+		"project_start": "August 2015",
+		"project_end": "October 2015",
+		"project_title": "Network Multitenancy",
+		"objective": "Add support for commercial business customers into physical infrastructure that supported residential customers, including both general data and VoIP traffic.",
+		"achievements": "Mapped commercial requirements into existing network design that provided specific customer needs without the need to modify physical network layout. Improved overall traffic requirements for both commercial and residential customers by moving layer-3 routed endpoints to single on-site edge endpoint and trunking 802.1q within the site. This also provided the ability to easily modify a single VLAN at the edge and provide aggregation before announcement into the network core without having to modify multiple devices. Developed configuration that could be deployed into future sites for day-one support of multiple customer types.",
 		"technologies": [
-			"",
-			""
+			"802.1q VLAN",
+			"802.11 WLAN",
+			"OSPF",
+			"RouterOS",
+			"802.3 LANs",
+			"TCP/IP",
+			"VoIP"
 		]
 	},
 
