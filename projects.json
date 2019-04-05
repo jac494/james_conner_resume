@@ -1,67 +1,121 @@
 [
 	{
-		"company": "",
-		"role": "",
-		"project_start": "",
-		"project_end": "",
-		"project_title": "",
-		"objective": "",
-		"achievements": "",
+		"company": "AutoZone, Inc.",
+		"project_title": "Store Network Upgrade",
+		"role": "Network Support Specialist",
+		"project_start": "May 2016",
+		"project_end": "May 2018",
+		"objective": "Upgrade network and systems hardware, cabling, software, LAN, and WAN for 6,000+ remote sites from DMVPN, modem backup, digital on-premise phones, to provider MPLS backbone, managed switches, hosted VoIP, and LTE backup. Provide support to on-site technicians upgrading sites during non-business hours.",
+		"achievements": "As a team, provided remote support including hardware and software troubleshooting for on-site technicians upgrading sites. Collaborated to develop scripts to provide repeatable, templated verification of sites post-upgrade.",
 		"technologies": [
-			"",
-			""
+			"Cisco IOS",
+			"Cisco IOS-XE",
+			"Linux",
+			"TCP/IP",
+			"EIGRP",
+			"DMVPN",
+			"BGP",
+			"MPLS",
+			"802.1q",
+			"802.3",
+			"T1",
+			"QoS",
+			"Cisco Catalyst switches",
+			"VoIP",
+			"Cisco CME",
+			"VBscript",
+			"PowerShell",
+			"Cisco EEM",
+			"Shell scripting"
 		]
 	},
 	{
-		"company": "",
-		"role": "",
-		"project_start": "",
-		"project_end": "",
-		"project_title": "",
-		"objective": "",
-		"achievements": "",
+		"company": "AutoZone, Inc.",
+		"project_title": "Commercial Acceleration",
+		"role": "Systems Specialist",
+		"project_start": "December 2017",
+		"project_end": "April 2018",
+		"objective": "Provide fault-tolerant network connectivity to support new commercial sales initiatives.",
+		"achievements": "Based on business requirements, acted as network engineering lead to design and deploy high-availability routing and switching topology to two sites for alpha testing. Tested and verified that topology could withstand multiple physical and logical failures while maintaining uptime.",
 		"technologies": [
-			"",
-			""
+			"Cisco IOS-XE",
+			"HSRP",
+			"TCP/IP",
+			"EIGRP",
+			"BGP",
+			"MPLS",
+			"VoIP"
 		]
 	},
 	{
-		"company": "",
-		"role": "",
-		"project_start": "",
-		"project_end": "",
-		"project_title": "",
-		"objective": "",
-		"achievements": "",
+		"company": "AutoZone, Inc.",
+		"project_title": "Next-Day Delivery",
+		"role": "Systems Specialist",
+		"project_start": "May 2018",
+		"project_end": "Jun 2018",
+		"objective": "Expand physical and logical site networks to support business objectives for next-day delivery services.",
+		"achievements": "Acted as network engineering lead to create configuration template for additional network devices being deployed to select sites which enabled immediate turn-around time for changes to requirements as devices were being deployed. Worked with systems team to allow additional systems to be incorporated into existing site networks. Based on requirements as they were available, built and deployed configuration that enabled integration of new network systems into the existing site network.",
 		"technologies": [
-			"",
-			""
+			"Cisco IOS",
+			"Cisco Catalyst switches",
+			"802.1q",
+			"Python",
+			"Jinja2"
 		]
 	},
 	{
-		"company": "",
-		"role": "",
-		"project_start": "",
-		"project_end": "",
-		"project_title": "",
-		"objective": "",
-		"achievements": "",
+		"company": "AutoZone, Inc.",
+		"project_title": "Regional Office Network Conversion",
+		"role": "Systems Specialist",
+		"project_start": "May 2018",
+		"project_end": "July 2018",
+		"objective": "pgrade network and phone systems at regional offices to newer core infrastructure including transitioning routing protocols, migrating digital phone systems to VoIP, and upgrading routing and switching hardware and configurations.",
+		"achievements": "Acted as engineering lead to create configurations for network devices being deployed to offices. Acted as primary point of contact for network deployment from VoIP team, on-site technicians, project management, and network infrastructure teams.",
 		"technologies": [
-			"",
-			""
+			"Cisco IOS",
+			"Cisco IOS-XE",
+			"BGP",
+			"LTE",
+			"VoIP",
+			"EIGRP",
+			"Cisco EEM",
+			"802.3 Ethernet",
+			"802.1q VLANs"
+		]
+	},
+	{
+		"company": "AutoZone, Inc.",
+		"project_title": "Network Data Aggregation and Workflow Automation",
+		"role": "Systems Specialist/Developer",
+		"project_start": "November 2018",
+		"project_end": "In Progress",
+		"objective": "Aggregate site data into single source-of-truth to enable faster disaster recovery for remote sites, facilitate consistent deployment of new and replacement network devices, and also act as the back-end data layer to automate troubleshooting workflows. This project will also enable migrating existing configuration template system to inherited templates based on site type and reduce toil on maintenance of templates and data collection for template variables.",
+		"achievements": "Designed, built, and deployed consumer code to pull data from multiple sources including HTML, CSV, and T-SQL databases and correlate to correct sites. Designed, built and deployed additional service utilizing Netmiko and subrpocesses in a multi-stage pipeline to map data onto template for site devices and concurrently pull live network data to combine with NMS historical data based on traditional SNMP polling and trap collection.",
+		"technologies": [
+			"Python",
+			"Jinja2",
+			"Flask",
+			"Netmiko",
+			"MongoDB",
+			"Docker",
+			"Ansible",
+			"Linux"
 		]
 	},
 	{
 		"company": "Computers & Networks, Inc.",
+		"project_title": "On-Site Systems Administration",
 		"role": "Systems Administrator",
 		"project_start": "November 2015",
 		"project_end": "May 2016",
-		"project_title": "On-Site Systems Administration",
 		"objective": "On-site design, administration, and support of network hardware and software, server systems, virtualization environment, network services, and data backups.",
 		"achievements": "Successfully relocated customer systems on office move; monitored and verified tape backups; monitored and verified network services to maintain uptime; consistently provisioned and deployed desktop and laptop systems for new users within SLAs",
 		"technologies": [
 			"Windows 7",
             "Windows 10",
+            "Windows Server 2003",
+            "Windows Server 2008",
+            "Windows Server 2012",
             "Microsoft Exchange",
             "Microsoft Active Directory",
             "Microsoft Hyper-V",
@@ -82,15 +136,18 @@
 	},
 	{
 		"company": "Computers & Networks, Inc.",
+		"project_title": "Hardware Support",
 		"role": "Systems Support",
 		"project_start": "November 2015",
 		"project_end": "May 2016",
-		"project_title": "Hardware Support",
-		"objective": "",
-		"achievements": "",
+		"objective": "Procure, configure, deploy, and troubleshoot hardware, networks, operating systems, user applications, and printers for multiple business customers.",
+		"achievements": "Maintained response to customer support requests.",
 		"technologies": [
 			"Windows 7",
             "Windows 10",
+            "Windows Server 2003",
+            "Windows Server 2008",
+            "Windows Server 2012",
             "Microsoft Exchange",
             "Microsoft Active Directory",
             "Microsoft Hyper-V",
@@ -111,10 +168,10 @@
 	},
 	{
 		"company": "Premier Satellite & Internet",
+		"project_title": "Network Core Protocol Conversion",
 		"role": "Network Engineer",
 		"project_start": "May 2014",
 		"project_end": "July 2014",
-		"project_title": "Network Core Protocol Conversion",
 		"objective": "Convert network core from layer-2 switched network utilizing static routes to dynamically-routed core using OSPF enabling future expansion to add BGP peerings, increase network scalability, and simplify configuration.",
 		"achievements": "Successfully migrated production network core serving 24/7 user traffic. Edge router configuration simplified upon addtion of new sites by dynamically adding OSPF adjacencies which also aided in faster scalability without the need for additional manual updates within the network core and edge.",
 		"technologies": [
@@ -126,12 +183,12 @@
 	},
 	{
 		"company": "Premier Satellite & Internet",
+		"project_title": "BGP Multihoming",
 		"role": "Network Engineer",
 		"project_start": "July 2014",
 		"project_end": "February 2015",
-		"project_title": "BGP Multihoming",
 		"objective": "Add additional BGP peerings to increase fault tolerance and network throughput.",
-		"achievements": "Upgraded edge routers to hardware and software that could handle larger routing tables and routing updates from multiple peers while maintaining throughput for user traffic. Incrementally enabled BGP peerings and validated routing policies throughout the network. Provided fault-tolerance through dynamic routing around failures at the network edge.",
+		"achievements": "Upgraded edge router hardware and software to enable larger routing tables and routing updates from multiple peers while maintaining throughput for user traffic. Incrementally enabled BGP peerings and validated routing policies throughout the network. Provided fault-tolerance through dynamic routing around failures at the network edge.",
 		"technologies": [
 			"TCP/IP",
 			"BGP",
@@ -141,10 +198,10 @@
 	},
 	{
 		"company": "Premier Satellite & Internet",
+		"project_title": "Site Addition and Integration",
 		"role": "Network Engineer",
 		"project_start": "May 2014",
 		"project_end": "October 2015",
-		"project_title": "Site Addition and Integration",
 		"objective": "Join new customer sites into the network. Evaluate requirements, implement configuration to integrate into existing network design, deploy necessary hardware and integrate into monitoring platform, and validate that deployment meets requirements.",
 		"achievements": "Deployed IPAM service for network operations to more effeciently maintain and view IP space on deployment. Deployed DNS for internal network operations to enable consistent scale and predictable access with existing network infrastructure and as new infrastructure was added. Built and deployed physical and logical network configurations for new network sites. Used VMWare ESXi to create hypervisor platform for network services and moved NMS, DNS, and IPAM into virtual infrastructure to consolidate footprint as well as ease backup and redeployment in outages and disaster recovery.",
 		"technologies": [
@@ -155,6 +212,7 @@
 			"TCP/IP",
 			"OSPF",
 			"BGP",
+			"VRRP",
 			"802.11 WLANs",
 			"802.1q VLANs",
 			"PTP wireless backhaul",
@@ -167,15 +225,15 @@
 			"Linux",
 			"Asterisk PBX",
 			"VMWare ESXi",
-			"Dell Poweredge"
+			"Dell Poweredge Servers"
 		]
 	},
 	{
 		"company": "Premier Satellite & Internet",
+		"project_title": "Network Multitenancy",
 		"role": "Network Engineer",
 		"project_start": "August 2015",
 		"project_end": "October 2015",
-		"project_title": "Network Multitenancy",
 		"objective": "Add support for commercial business customers into physical infrastructure that supported residential customers, including both general data and VoIP traffic.",
 		"achievements": "Mapped commercial requirements into existing network design that provided specific customer needs without the need to modify physical network layout. Improved overall traffic requirements for both commercial and residential customers by moving layer-3 routed endpoints to single on-site edge endpoint and trunking 802.1q within the site. This also provided the ability to easily modify a single VLAN at the edge and provide aggregation before announcement into the network core without having to modify multiple devices. Developed configuration that could be deployed into future sites for day-one support of multiple customer types.",
 		"technologies": [
@@ -185,8 +243,8 @@
 			"RouterOS",
 			"802.3 LANs",
 			"TCP/IP",
-			"VoIP"
+			"VoIP",
+			"VRRP"
 		]
-	},
-
+	}
 ]
