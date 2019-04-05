@@ -1,7 +1,7 @@
 [
 	{
 		"company": "",
-		"position": "",
+		"role": "",
 		"project_start": "",
 		"project_end": "",
 		"project_title": "",
@@ -14,7 +14,7 @@
 	},
 	{
 		"company": "",
-		"position": "",
+		"role": "",
 		"project_start": "",
 		"project_end": "",
 		"project_title": "",
@@ -27,7 +27,7 @@
 	},
 	{
 		"company": "",
-		"position": "",
+		"role": "",
 		"project_start": "",
 		"project_end": "",
 		"project_title": "",
@@ -40,7 +40,85 @@
 	},
 	{
 		"company": "",
-		"position": "",
+		"role": "",
+		"project_start": "",
+		"project_end": "",
+		"project_title": "",
+		"objective": "",
+		"achievements": "",
+		"technologies": [
+			"",
+			""
+		]
+	},
+	{
+		"company": "Computers & Networks, Inc.",
+		"role": "Systems Administrator",
+		"project_start": "",
+		"project_end": "",
+		"project_title": "",
+		"objective": "",
+		"achievements": "",
+		"technologies": [
+			"",
+			""
+		]
+	},
+	{
+		"company": "Computers & Networks, Inc.",
+		"role": "Systems Support",
+		"project_start": "",
+		"project_end": "",
+		"project_title": "",
+		"objective": "",
+		"achievements": "",
+		"technologies": [
+			"",
+			""
+		]
+	},
+	{
+		"company": "",
+		"role": "",
+		"project_start": "",
+		"project_end": "",
+		"project_title": "",
+		"objective": "",
+		"achievements": "",
+		"technologies": [
+			"",
+			""
+		]
+	},
+	{
+		"company": "",
+		"role": "",
+		"project_start": "",
+		"project_end": "",
+		"project_title": "",
+		"objective": "",
+		"achievements": "",
+		"technologies": [
+			"",
+			""
+		]
+	},
+	{
+		"company": "",
+		"role": "",
+		"project_start": "",
+		"project_end": "",
+		"project_title": "",
+		"objective": "",
+		"achievements": "",
+		"technologies": [
+			"",
+			""
+		]
+	},
+	{
+		"company": "",
+		"role": "",
 		"project_start": "",
 		"project_end": "",
 		"project_title": "",
