@@ -1,0 +1,13 @@
+{
+	"first_name": "James",
+	"last_name": "Conner",
+	"title": "Network Engineer",
+	"phone": "(901) 734-2089",
+	"address": "Memphis, TN",
+	"email": "jac494@gmail.com",
+	"web": [
+		"linkedin.com/in/james-a-conner/",
+		"https://blinkingboxes.com"
+	],
+	"summary": "Experienced network engineer specializing in network templating and automation."
+}
