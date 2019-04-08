@@ -1,0 +1,30 @@
+<!doctype html>
+    <head>
+    </head>
+    <body>
+    <div class="main">
+        <header>
+            <h1>{{ personal_info.first_name }} {{ personal_info.last_name }}</h1>
+            <p>{{ personal_info.address}} | {{ personal_info.email }} | {{ personal_info.phone }}</p>
+            {% for url in personal_info.web %}
+            <a href="{{ url }}">{{ url }}</a>
+            {% endfor %}
+        </header>
+        <div class="projects">
+            {% for project in projects %}
+            <div class="single-project">
+                <h2>{{ project.company }} - {{ project.title }}</h2>
+                <h3>{{ project.project_start }} - {{ project.project_end }}</h3>
+                <hr />
+                <h4>Role: {{ project.role }}</h4>
+                <h4>Objective</h4>
+                <p>{{ project.objective }}</p>
+                <h4>Achievements</h4>
+                <p>{{ project.achievements }}</p>
+                <h4>Technologies</h4>
+                <p>{{ project.technologies|join(', ') }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>
