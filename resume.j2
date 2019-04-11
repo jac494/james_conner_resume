@@ -1,30 +1,131 @@
 <!doctype html>
     <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            header {
+                margin-top: .5rem;
+                margin-bottom: 2rem;
+            }
+
+            .headerimg {
+                width: 175px;
+                height: 175px;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .single-project {
+                margin-bottom: 1.5rem;
+            }
+
+            .company-work {
+                margin-bottom: 4.5rem;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                padding-top: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .avoid-pagebreak {
+                page-break-inside: avoid;
+            }
+        </style>
     </head>
     <body>
-    <div class="main">
-        <header>
+    <div class="container">
+        <header class="text-center">
             <h1>{{ personal_info.first_name }} {{ personal_info.last_name }}</h1>
-            <p>{{ personal_info.address}} | {{ personal_info.email }} | {{ personal_info.phone }}</p>
-            {% for url in personal_info.web %}
-            <a href="{{ url }}">{{ url }}</a>
+            <ul class="list-inline">
+                <li class="list-inline-item">{{ personal_info.address}}</li>
+                <li class="list-inline-item">{{ personal_info.email }}</li>
+                <li class="list-inline-item">{{ personal_info.phone }}</li>
+            </ul>
+            <img src="me.jpg" class="img-thumbnail headerimg">
+            <ul class="list-inline">
+            {% for web_item in personal_info.web %}
+                <li class="list-inline-item">
+                    <a class="personal-url" href="{{ web_item.url }}">
+                        {{ web_item.title }}
+                    </a>
+                </li>
             {% endfor %}
+            </ul>
         </header>
-        <div class="projects">
-            {% for project in projects %}
+        <hr />
+        {% for company in companies %}
+        <div class="company-work">
+            <div class="row justify-content-center">
+                <div class="col-8 text-center">
+                    <h2>{{ company.name }}</h2>
+                    <p>{{ company.desc }}</p>
+                </div>
+            </div>
+            <hr />
+            {% for project in company.projects %}
+            <!-- div class="single-project avoid-pagebreak" -->
             <div class="single-project">
-                <h2>{{ project.company }} - {{ project.title }}</h2>
-                <h3>{{ project.project_start }} - {{ project.project_end }}</h3>
-                <hr />
-                <h4>Role: {{ project.role }}</h4>
-                <h4>Objective</h4>
-                <p>{{ project.objective }}</p>
-                <h4>Achievements</h4>
-                <p>{{ project.achievements }}</p>
-                <h4>Technologies</h4>
-                <p>{{ project.technologies|join(', ') }}</p>
+                <div class="row">
+                    <div class="col-12">
+                        <h3>{{ project.project_title }}</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <h5>Role: {{ project.role }}</h5>
+                    </div>
+                    <div class="col-4">
+                        <h5>{{ project.project_start }} - {{ project.project_end }}</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>Objective</h5>
+                        <p>{{ project.objective }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>Achievements</h5>
+                        <p>{{ project.achievements }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h5>Technologies</h5>
+                        <ul class="list-inline">
+                        {% for technology in project.technologies %}
+                            <li class="list-inline-item">{{ technology }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    <!-- div class="col-8">
+                        <h5>Objective</h5>
+                        <p>{{ project.objective }}</p>
+                        <h5>Achievements</h5>
+                        <p>{{ project.achievements }}</p>
+                    </div>
+                    <div class="col-4">
+                        <h5>Technologies</h5>
+                        <ul class="list-inline">
+                        {% for technology in project.technologies %}
+                            <li class="list-inline-item">{{ technology }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div -->
+                </div>
             </div>
             {% endfor %}
         </div>
+        {% endfor %}
+        <footer>
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <p>References and education available on request.</p>
+                    <p>Additional work history is available on <a href="https://linkedin.com/in/james-a-conner/">linkedin.com/in/james-a-conner/</a></p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
