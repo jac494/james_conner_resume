@@ -80,8 +80,8 @@
 			"VoIP",
 			"EIGRP",
 			"Cisco EEM",
-			"802.3 Ethernet",
-			"802.1q VLANs"
+			"802.3",
+			"802.1q"
 		]
 	},
 	{
@@ -127,9 +127,9 @@
             "Cisco switches",
             "HP Switches",
             "HP ProLiant servers",
-            "802.3 LANs",
-            "802.1q VLANs",
-            "802.11 WLANs",
+            "802.3",
+            "802.1q",
+            "802.11",
             "TCP/IP",
             "tape backups",
             "VoIP"
@@ -159,9 +159,9 @@
             "Cisco switches",
             "HP Switches",
             "HP ProLiant servers",
-            "802.3 LANs",
-            "802.1q VLANs",
-            "802.11 WLANs",
+            "802.3",
+            "802.1q",
+            "802.11",
             "TCP/IP",
             "tape backups",
             "VoIP"
@@ -214,8 +214,8 @@
 			"OSPF",
 			"BGP",
 			"VRRP",
-			"802.11 WLANs",
-			"802.1q VLANs",
+			"802.11",
+			"802.1q",
 			"PTP wireless backhaul",
 			"PTMP wireless",
 			"DOCSIS",
@@ -239,11 +239,11 @@
 		"objective": "Add support for commercial business customers into physical infrastructure that supported residential customers, including both general data and VoIP traffic.",
 		"achievements": "Mapped commercial requirements into existing network design that provided specific customer needs without the need to modify physical network layout. Improved overall traffic requirements for both commercial and residential customers by moving layer-3 routed endpoints to single on-site edge endpoint and trunking 802.1q within the site. This also provided the ability to easily modify a single VLAN at the edge and provide aggregation before announcement into the network core without having to modify multiple devices. Developed configuration that could be deployed into future sites for day-one support of multiple customer types.",
 		"technologies": [
-			"802.1q VLAN",
-			"802.11 WLAN",
+			"802.1q",
+			"802.11",
 			"OSPF",
 			"RouterOS",
-			"802.3 LANs",
+			"802.3",
 			"TCP/IP",
 			"VoIP",
 			"VRRP"

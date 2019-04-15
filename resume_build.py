@@ -7,6 +7,9 @@ from jinja2 import (Environment,
                     select_autoescape)
 
 
+TEMPLATES = ['projects_resume.j2', 'experience_resume.j2']
+
+
 def find_projects(company_name, project_list):
     result = []
     for project in project_list:
@@ -22,18 +25,25 @@ def sortable_date(project, date_key):
     return date
 
 
+def technologies_set(projects):
+    tech_set = set()
+    for project in projects:
+        tech_set.update(project['technologies'])
+    tech_set = list(tech_set)
+    tech_set.sort()
+    return tech_set
+
+
 def correlate_projects(companies, projects):
     """relates projects to specific companies and order projects from
     newest-oldest"""
-    result = list()
     for company in companies:
         project_list = find_projects(company['name'], projects)
         project_list.sort(key=lambda x: sortable_date(x, 'project_start'),
                           reverse=True)
         company['projects'] = project_list
+        company['all_technologies'] = technologies_set(project_list)
     return companies
-    
-            
 
 
 def load_json_files():
@@ -52,9 +62,14 @@ def main():
     json_data_load = load_json_files()
     env = Environment(loader=FileSystemLoader(os.getcwd()),
                       autoescape=select_autoescape(['html', 'xml']))
-    resume_template = env.get_template('resume.j2')
-    rendered_resume = resume_template.render(**json_data_load)
-    print(rendered_resume)
+    for template_path in TEMPLATES:
+        resume_template = env.get_template(template_path)
+        rendered_resume = resume_template.render(**json_data_load)
+        out_html_file = '.'.join(template_path.split('.')[:-1])
+        out_html_file += '.html'
+        print(rendered_resume)
+        with open(out_html_file, 'w') as outfile:
+            outfile.write(rendered_resume)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,107 @@
+<!doctype html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            .headerimg {
+                width: 175px;
+                height: 175px;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .headerrow {
+                margin-top: .5rem;
+                margin-bottom: 1rem;
+            }
+
+            .company-work {
+                margin-bottom: 1.5rem;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                padding-top: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .avoid-pagebreak {
+                page-break-inside: avoid;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row headerrow">
+                <div class="col-2">
+                    <img src="me.jpg" class="img-thumbnail">
+                </div>
+                <div class="col-10">
+                    <h1>{{ personal_info.first_name }} {{ personal_info.last_name }}</h1>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">{{ personal_info.address}}</li>
+                        <li class="list-inline-item">{{ personal_info.email }}</li>
+                        <li class="list-inline-item">{{ personal_info.phone }}</li>
+                    </ul>
+                    <p>{{ personal_info.summary }}</p>
+                    <!-- ul class="list-inline">
+                    {% for web_item in personal_info.web %}
+                        <li class="list-inline-item">
+                            <a class="personal-url" href="{{ web_item.url }}">
+                                {{ web_item.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul -->
+                </div>
+            </div>
+            <!-- hr / -->
+            {% for company in companies %}
+            <div class="company-work">
+                <div class="row justify-content-center">
+                    <div class="col-8">
+                        <h2>{{ company.name }}</h2>
+                        <p>{{ company.desc }}</p>
+                    </div>
+                    <div class="col-4">
+                        <h4>{{ company.position }}</h4>
+                        <p>{{ company.start }} - {{ company.end }}</h4>
+                    </div>
+                </div>
+                <!-- hr / -->
+                <div class="row">
+                    <div class="col-8">
+                        <h5>Core Responsibilites and Achievements</h5>
+                        <ul>
+                            {% for bullet_item in company.bullet_items %}
+                            <li>{{ bullet_item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h5>Environment and Technologies</h5>
+                        <ul class="list-inline">
+                        {% for technology in company.all_technologies %}
+                            <li class="list-inline-item">{{ technology }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <footer>
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <h2>Education</h2>
+                        <ul>
+                        {% for edu_item in personal_info.education %}
+                            <li>{{ edu_item }}</li>
+                        {% endfor %}
+                        </ul>
+                        <p>References available on request.</p>
+                        <p>Additional work history is available on <a href="https://linkedin.com/in/james-a-conner/">linkedin.com/in/james-a-conner/</a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

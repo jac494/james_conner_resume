@@ -1,20 +1,50 @@
 [
 	{
 		"name": "AutoZone, Inc.",
+		"position": "Systems Specialist",
 		"start": "05/2016",
 		"end": "current",
-		"desc": "Auto parts retailer with over 6,000 locations in the US, Mexico, Puerto Rico, and Brazil also having a self-supported hardware and software stack."
+		"desc": "Auto parts retailer with over 6,000 locations in the US, Mexico, Puerto Rico, and Brazil also having a self-supported hardware and software stack.",
+		"exp_summary": "",
+		"bullet_items":
+			[
+				"Designed and deployed high-availability remote site to support new business initiatives.",
+				"Aggregated multiple sources of site location and network information into single source-of-truth utilizing Python, Ansible, Docker, and MongoDB.",
+				"Implemented new circuit troubleshooting that increased vendor response by 100% and decreased mean time to repair by over 50%.",
+				"Built and maintained network device configuration templates for deployment through vendors.",
+				"Provided remote support and troubleshooting for routers, switches, and VoIP phones at stores and remote offices.",
+				"Worked with vendors to deploy, test, and troubleshoot remote site hardware and configuration."
+			]
 	},
 	{
 		"name": "Computers & Networks, Inc.",
+		"position": "Systems Administrator",
 		"start": "11/2015",
 		"end": "05/2016",
-		"desc": "Systems integrator providing hardware and software installation, maintenance, and support as well as systems and network design and implementation for businesses in Memphis and the surrounding areas as well as remote locations nationwide."
+		"desc": "Systems integrator providing hardware and software installation, maintenance, and support as well as systems and network design and implementation for businesses in Memphis and the surrounding areas as well as remote locations nationwide.",
+		"exp_summary": "",
+		"bullet_items":
+			[
+				"Administered Microsoft domain and on-premise Exchange as well as managing wired and wireless networks and Internet connectivity for clients' branch and corporate offices.",
+				"Provided helpdesk support for desktop and server systems and wired and wireless networks.",
+				"Installed, configured, and maintained desktop and laptop hardware and peripherals.",
+				"Managed OS upgrades and patching for server and desktop systems."
+			]
 	},
 	{
 		"name": "Premier Satellite & Internet",
+		"position": "Network Engineer",
 		"start": "05/2014",
 		"end": "10/2015",
-		"desc": "ISP and TV provider operating in Memphis and the surrounding areas specializing in deploying and providing services to apartment communities and businesses."
+		"desc": "ISP and TV provider operating in Memphis and the surrounding areas specializing in deploying and providing services to apartment communities and businesses.",
+		"bullet_items":
+			[
+				"Redesigned core network from layer-2 topology utilizing static routes to dynamically routed network using OSPF.",
+				"Migrated edge network to BGP, expanded edge to multiple providers for BGP multihoming.",
+				"Designed and installed point-to-point and point-to-multipoint wireless backhaul to increase network footprint and deploy additional client sites.",
+				"Built server infrastructure for additional network operations capabilites.",
+				"Migrated network monitoring system to virtualized environment and deployed IPAM and DNS to support network operations.",
+				"Designed and integrated Ethernet and DOCSIS networks for customer access."
+			]
 	}
 ]
