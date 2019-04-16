@@ -2,9 +2,9 @@
 
 import json
 import os
-from jinja2 import (Environment,
-                    FileSystemLoader,
-                    select_autoescape)
+
+from jinja2 import Environment, FileSystemLoader, select_autoescape
+import pdfkit
 
 
 TEMPLATES = [
@@ -19,7 +19,14 @@ PDFKIT_OPTIONS = {
     'margin-bottom': '0.75in',
     'margin-left': '0.75in'
     }
-
+    
+DATAFILES = {
+    'projects': 'data/projects.json',
+    'personal_info': 'data/personal_info.json',
+    'companies': 'data/companies.json',
+    }
+    
+OUTPUT = 'output_files'
 
 def find_projects(company_name, project_list):
     result = []
@@ -58,29 +65,49 @@ def correlate_projects(companies, projects):
 
 
 def load_json_files():
-    with open('projects.json') as projects_fp:
+    with open(DATAFILES['projects']) as projects_fp:
         projects = json.load(projects_fp)
-    with open('personal_info.json') as personal_info_fp:
+    with open(DATAFILES['personal_info']) as personal_info_fp:
         personal_info = json.load(personal_info_fp)
-    with open('companies.json') as companies_fp:
+    with open(DATAFILES['companies']) as companies_fp:
         companies = json.load(companies_fp)
     companies = correlate_projects(companies=companies, projects=projects)
     return dict(personal_info=personal_info,
                 companies=companies)
 
+def base_filename(template_path):
+    fname = template_path.split(os.sep)[-1]
+    base_name = '.'.join(fname.split('.')[:-1])
+    return base_name
+
+
+def create_resume_files(jinja_env, template_path, template_data):
+    resume_template = jinja_env.get_template(template_path)
+    rendered_resume = resume_template.render(**template_data)
+    base_name = base_filename(template_path)
+    html_file = os.sep.join([OUTPUT, base_name + '.html'])
+    pdf_file = html_file[:-4] + 'pdf'
+    with open(html_file, 'w') as outfile:
+        outfile.write(rendered_resume)
+    pdfkit.from_file(html_file, pdf_file, options=PDFKIT_OPTIONS)
+    
+
+def make_data_dir():
+    try:
+        os.mkdir(OUTPUT)
+    except FileExistsError:
+        pass
+
 
 def main():
+    make_data_dir()
     json_data_load = load_json_files()
     env = Environment(loader=FileSystemLoader(os.getcwd()),
-                      autoescape=select_autoescape(['html', 'xml']))
+                      autoescape=select_autoescape(['html']))
     for template_path in TEMPLATES:
-        resume_template = env.get_template(template_path)
-        rendered_resume = resume_template.render(**json_data_load)
-        out_html_file = '.'.join(template_path.split('.')[:-1])
-        out_html_file += '.html'
-        print(rendered_resume)
-        with open(out_html_file, 'w') as outfile:
-            outfile.write(rendered_resume)
+        create_resume_files(jinja_env=env,
+                            template_path=template_path, 
+                            template_data=json_data_load)
 
 
 if __name__ == "__main__":

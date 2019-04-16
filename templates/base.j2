@@ -56,39 +56,8 @@
                     <p>{{ personal_info.summary }}</p>
                 </div>
             </div>
-            {% for company in companies %}
-            <div class="company-work">
-                <div class="row justify-content-center">
-                    <div class="col-8">
-                        <h2>{{ company.name }}</h2>
-                        <p>{{ company.desc }}</p>
-                    </div>
-                    <div class="col-4">
-                        <h4>{{ company.position }}</h4>
-                        <p>{{ company.start }} - {{ company.end }}</h4>
-                    </div>
-                </div>
-                <!-- hr / -->
-                <div class="row">
-                    <div class="col-8">
-                        <h5>Core Responsibilites and Achievements</h5>
-                        <ul>
-                            {% for bullet_item in company.bullet_items %}
-                            <li>{{ bullet_item }}</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    <div class="col-4">
-                        <h5>Environment and Technologies</h5>
-                        <ul class="list-inline">
-                        {% for technology in company.all_technologies %}
-                            <li class="list-inline-item">{{ technology }}</li>
-                        {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
+            {% block content %}
+            {% endblock %}
             <footer>
                 <div class="row justify-content-center">
                     <div class="col-12">
