@@ -1,2 +1,4 @@
 resume_notes.txt
 venv/*
+*.pdf
+*.html
