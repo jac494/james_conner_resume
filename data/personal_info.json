@@ -15,5 +15,8 @@
 		"Graduated from Collierville High School.",
 		"Attended Mississippi State University for double major in Aerospace Engineering and Physics."
 	],
+	"certifications": [
+	    "CCNA R&S (expired Aug. 2018)"
+	],
 	"summary": "Experienced network engineer and Python developer focused on simple, stable, scalable networks and code."
 }
