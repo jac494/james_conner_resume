@@ -1,61 +1,5 @@
-<!doctype html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <title>James Conner | Work Experience</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <style>
-            .headerimg {
-                width: 175px;
-                height: 175px;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
-            }
-
-            .headerrow {
-                margin-top: .5rem;
-                margin-bottom: 1rem;
-            }
-
-            .company-work {
-                margin-bottom: 1.5rem;
-                border: 1px solid #ddd;
-                border-radius: 5px;
-                padding-top: 1rem;
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-
-            .avoid-pagebreak {
-                page-break-inside: avoid;
-            }
-            
-            @media print {
-                body {line-height: 1.2;}
-                h1 {font-size: 26px;}
-                h2 {font-size: 24px;}
-                h3 {font-size: 22px;}
-                h4 {font-size: 20px;}
-                h5 {font-size: 18px;}
-                p,li,a {font-size: 12px;}
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="row headerrow">
-                <div class="col-2">
-                    <img src="../data/me.jpg" class="img-thumbnail">
-                </div>
-                <div class="col-10">
-                    <h1>{{ personal_info.first_name }} {{ personal_info.last_name }}</h1>
-                    <ul class="list-inline">
-                        <li class="list-inline-item">{{ personal_info.address}}</li>
-                        <li class="list-inline-item">{{ personal_info.email }}</li>
-                        <li class="list-inline-item">{{ personal_info.phone }}</li>
-                    </ul>
-                    <p>{{ personal_info.summary }}</p>
-                </div>
-            </div>
+{% extends 'templates/base.j2' %}
+{% block content %}
             {% for company in companies %}
             <div class="company-work">
                 <div class="row justify-content-center">
@@ -89,20 +33,4 @@
                 </div>
             </div>
             {% endfor %}
-            <footer>
-                <div class="row justify-content-center">
-                    <div class="col-12">
-                        <h2>Education</h2>
-                        <ul>
-                        {% for edu_item in personal_info.education %}
-                            <li>{{ edu_item }}</li>
-                        {% endfor %}
-                        </ul>
-                        <p>References available on request.</p>
-                        <p>Additional work history is available on <a href="https://linkedin.com/in/james-a-conner/">linkedin.com/in/james-a-conner/</a></p>
-                    </div>
-                </div>
-            </footer>
-        </div>
-    </body>
-</html>
+{% endblock content %}
