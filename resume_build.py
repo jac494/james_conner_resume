@@ -7,7 +7,18 @@ from jinja2 import (Environment,
                     select_autoescape)
 
 
-TEMPLATES = ['projects_resume.j2', 'experience_resume.j2']
+TEMPLATES = [
+    'templates/projects_resume.j2',
+    'templates/experience_resume.j2'
+    ]
+
+PDFKIT_OPTIONS = {
+    'page-size': 'Letter',
+    'margin-top': '0.75in',
+    'margin-right': '0.75in',
+    'margin-bottom': '0.75in',
+    'margin-left': '0.75in'
+    }
 
 
 def find_projects(company_name, project_list):
