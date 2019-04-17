@@ -11,7 +11,6 @@
             </div>
             <hr />
             {% for project in company.projects %}
-            <!-- div class="single-project avoid-pagebreak" -->
             <div class="single-project">
                 <div class="row">
                     <div class="col-12">
@@ -47,20 +46,6 @@
                         {% endfor %}
                         </ul>
                     </div>
-                    <!-- div class="col-8">
-                        <h5>Objective</h5>
-                        <p>{{ project.objective }}</p>
-                        <h5>Achievements</h5>
-                        <p>{{ project.achievements }}</p>
-                    </div>
-                    <div class="col-4">
-                        <h5>Technologies</h5>
-                        <ul class="list-inline">
-                        {% for technology in project.technologies %}
-                            <li class="list-inline-item">{{ technology }}</li>
-                        {% endfor %}
-                        </ul>
-                    </div -->
                 </div>
             </div>
             {% endfor %}
